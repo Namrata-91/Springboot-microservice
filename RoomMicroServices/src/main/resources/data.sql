@@ -1,0 +1,9 @@
+INSERT INTO room (Name, Room_Number, Size) VALUES ('tatami room', 'A1', '12m');
+INSERT INTO room (Name, Room_Number, Size) VALUES ('Quad', 'A2', '34m');
+
+INSERT INTO GUEST (LAST_NAME, FIRST_NAME, EMAIL_ADDRESS, COUNTRY, ADDRESS, STATE, PHONE_NUMBER) VALUES('Krinal', 'Shah', 'krinal21@gmail.com', 'India', 'sama road', 'Gujarat', '9281338183');
+INSERT INTO GUEST (LAST_NAME, FIRST_NAME, EMAIL_ADDRESS, COUNTRY, ADDRESS, STATE, PHONE_NUMBER) VALUES('Riya', 'patel', 'riya71@gmail.com', 'India', 'new vip road', 'UP', '8129347591');
+INSERT INTO GUEST (LAST_NAME, FIRST_NAME, EMAIL_ADDRESS, COUNTRY, ADDRESS, STATE, PHONE_NUMBER) VALUES('Priti', 'Roy', 'priti32@gmail.com', 'India', 'MG road', 'MP', '8322479065');
+
+
+INSERT INTO RESERVATION (ROOM_ID, GUEST_ID, RES_DATE) VALUES ((SELECT ROOM_ID FROM room WHERE Room_Number = 'A1'),(SELECT GUEST_ID FROM GUEST WHERE LAST_NAME = 'Riya'), '2020-02-06');
